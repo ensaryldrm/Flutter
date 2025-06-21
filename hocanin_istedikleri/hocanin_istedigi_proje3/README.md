@@ -1,4 +1,4 @@
-# Bütçe Yönetim Uygulaması (Flutter)
+# Bütçe Yönetim Uygulaması
 
 Kullanıcıların bütçelerini takip edebileceği, arttırma/azaltma işlemleri yapabileceği basit bir mobil uygulama.
 
