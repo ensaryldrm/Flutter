@@ -4,7 +4,7 @@ Kullanıcıların bütçelerini takip edebileceği, arttırma/azaltma işlemleri
 
 | Giriş Sayfası | Sonuç Sayfası |
 |--------------|--------------|
-| [Main Screen](assets/screenshots/ana_ekran.png) | ![Result Screen](assets/screenshots/sonuc_ekran.png)  |
+| [Ana Ekran](assets/screenshots/ana_ekran.png) | ![Sonuç Ekranı](assets/screenshots/sonuc_ekran.png)  |
 
 ## 🌟 Özellikler
 - Ad-soyad ve başlangıç bütçesi girişi
