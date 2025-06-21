@@ -4,7 +4,7 @@ Kullanıcıların bütçelerini takip edebileceği, arttırma/azaltma işlemleri
 
 | Giriş Sayfası | Sonuç Sayfası |
 |--------------|--------------|
-| [Ana Ekran](assets/screenshots/ana_ekran.png) | ![Sonuç Ekranı](assets/screenshots/sonuc_ekran.png)  |
+| [Ana Ekran](    Flutter/hocanin_istedikleri/hocanin_istedigi_proje3/assets/screenshots/ana_sayfa.png) | ![Sonuç Ekranı]    Flutter/hocanin_istedikleri/hocanin_istedigi_proje3/assets/screenshots/sonuc_sayfa.png)  |
 
 ## 🌟 Özellikler
 - Ad-soyad ve başlangıç bütçesi girişi
