@@ -10,4 +10,3 @@ Kullanıcıların bütçelerini takip edebileceği, arttırma/azaltma işlemleri
 - Ad-soyad ve başlangıç bütçesi girişi
 - Bütçe arttırma/azaltma işlemleri
 - Dinamik renkli bütçe göstergesi (negatif/pozitif durum)
-- Responsive tasarım (tüm cihazlarda uyumlu)
