@@ -6,7 +6,7 @@ Kullanıcıların bütçelerini takip edebileceği, arttırma/azaltma işlemleri
 |--------------|--------------|
 | [Ana Ekran](assets/screenshots/ana_sayfa.png) | [Sonuç Ekran](assets/screenshots/sonuc_sayfa.png) 
 
-## 🌟 Özellikler
+##  Özellikler
 - Ad-soyad ve başlangıç bütçesi girişi
 - Bütçe arttırma/azaltma işlemleri
 - Dinamik renkli bütçe göstergesi (negatif/pozitif durum)
