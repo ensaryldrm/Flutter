@@ -63,29 +63,28 @@ class KisiKart extends StatefulWidget {
   State<KisiKart> createState() => _KisiKartState();
 }
 
-class _KisiKartState extends State<KisiKart> {4
-
+class _KisiKartState extends State<KisiKart> {
   @override
   Widget build(BuildContext context) {
-      return Card(
-        color: Color.fromARGB(
-          Random().nextInt(255),
-          Random().nextInt(255),
-          Random().nextInt(255),
-          Random().nextInt(255),
-        ),
-        child: SizedBox(
-          height: 75,
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage("images/${widget.images}"),
-              radius: 25,
-            ),
-            title: Text("${widget.names}"),
-            subtitle: Text("0535 582 38 00"),
-            trailing: Icon(Icons.phone_android),
+    return Card(
+      color: Color.fromARGB(
+        Random().nextInt(255),
+        Random().nextInt(255),
+        Random().nextInt(255),
+        Random().nextInt(255),
+      ),
+      child: SizedBox(
+        height: 75,
+        child: ListTile(
+          leading: CircleAvatar(
+            backgroundImage: AssetImage("images/${widget.images}"),
+            radius: 25,
           ),
+          title: Text("${widget.names}"),
+          subtitle: Text("0535 582 38 00"),
+          trailing: Icon(Icons.phone_android),
         ),
-      );
+      ),
+    );
   }
 }
