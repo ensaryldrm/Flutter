@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grid_views/ornek2.dart';
+import 'package:grid_views/main.dart';
 
 class DetaySayfa extends StatefulWidget {
   final String yemekIsim;
@@ -42,9 +42,9 @@ class _DetaySayfaState extends State<DetaySayfa> {
                 height: 50,
                 child: FloatingActionButton(
                   onPressed: () {
-                    Navigator.pop(
+                    Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => Ornek2()),
+                      MaterialPageRoute(builder: (context) => MyApp()),
                     );
                   },
                   child: Text(

@@ -53,7 +53,7 @@ class _Ornek2State extends State<Ornek2> {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => DetaySayfa(
