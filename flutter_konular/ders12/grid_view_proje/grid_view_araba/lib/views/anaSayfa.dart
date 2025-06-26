@@ -69,6 +69,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
       170 * urun5.yuzdelik,
       170 * urun6.yuzdelik,
     ];
+    bool satinAlindiMi = false;
 
     return Scaffold(
       body: GridView.builder(
@@ -288,7 +289,30 @@ class _AnaSayfaState extends State<AnaSayfa> {
                                 setState(() {
                                   urunler[index].dugmeyeBasildiMi =
                                       !urunler[index].dugmeyeBasildiMi;
+
+                                  satinAlindiMi =
+                                      urunler[index].dugmeyeBasildiMi;
                                 });
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: satinAlindiMi
+                                        ? Text(
+                                            "Ürün Sepete Eklendi!",
+                                            style: TextStyle(
+                                              color: Colors.indigoAccent,
+                                            ),
+                                          )
+                                        : Text(
+                                            "Ürün Sepetten Çıkarıldı!",
+                                            style: TextStyle(
+                                              color: Colors.indigoAccent,
+                                            ),
+                                          ),
+                                    backgroundColor: Colors.white,
+                                    duration: Duration(seconds: 1),
+                                  ),
+                                );
                               },
                               child: urunler[index].dugmeyeBasildiMi
                                   ? Text(
