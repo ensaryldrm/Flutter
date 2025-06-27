@@ -29,50 +29,84 @@ class _HavaDurumuSayfaTasarimState extends State<HavaDurumuSayfaTasarim> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.only(top: 75),
+        padding: const EdgeInsets.only(top: 90, left: 35, right: 35),
         child: Column(
           children: [
-            Row(
-              // KONUM İŞARETİ
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 45),
-                  height: 40,
-                  width: 40,
-                  child: Image.asset("images/konum.png", color: Colors.white),
-                ),
+            // İLK SATIR - ÜST KONUM / ŞEHİR İSMİ
+            Container(
+              height: 30,
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 30,
 
-                // KONUM SAĞINDAKİ YAZI
-                Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(left: 10),
-                  height: 40,
-                  width: 100,
-                  child: Text(
-                    "Fortaleza",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 30,
+                            child: Image.asset(
+                              "images/konum.png",
+                              color: Colors.white,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 15),
+                            alignment: Alignment.center,
+                            height: 30,
+                            child: Text(
+                              "Fortaleza",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 30,
+                            child: Image.asset(
+                              "images/alt_ok.png",
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      alignment: Alignment.centerRight,
+                      height: 30,
 
-                // AŞAĞIYA BAKAN OK
-                SizedBox(
-                  child: Container(
-                    alignment: Alignment.center,
-                    child: Image.asset(
-                      width: 100,
-                      height: 100,
-                      "images/alt_ok.png",
-                      color: Colors.white,
+                      child: Image.asset("images/bildirim.png"),
                     ),
-                    color: Colors.red,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
+
+            // İKİNCİ SATIR - BÜYÜK RESİM
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 250,
+                    height: 250,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("images/gunesli_bulut.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          
           ],
         ),
       ),
