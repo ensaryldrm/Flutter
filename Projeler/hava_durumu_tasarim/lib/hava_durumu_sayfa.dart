@@ -958,7 +958,7 @@ class _HavaDurumuSayfaTasarimState extends State<HavaDurumuSayfaTasarim> {
                                             decoration: BoxDecoration(
                                               image: DecorationImage(
                                                 image: AssetImage(
-                                                  "images/yagmur.png",
+                                                  "images/gunesli_bulut.png",
                                                 ),
                                                 fit: BoxFit.contain,
                                               ),
