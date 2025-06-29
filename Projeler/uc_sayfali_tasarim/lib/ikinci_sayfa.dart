@@ -13,7 +13,7 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 100),
+        padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
         child: SingleChildScrollView(
           child: Column(
             children: [

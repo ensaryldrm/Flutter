@@ -144,7 +144,7 @@ class BirinciSayfa extends StatelessWidget {
           children: [
             // BİRİNCİ SATIR
             Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: const EdgeInsets.only(top: 50),
               child: Row(
                 children: [
                   Expanded(
