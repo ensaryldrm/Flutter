@@ -10,32 +10,129 @@ class AnaSayfa extends StatefulWidget {
 }
 
 class _AnaSayfaState extends State<AnaSayfa> {
-  List<Widget> sayfaListesi = [BirinciSayfa(),IkinciSayfa(),UcuncuSayfa()];
+  List<Widget> sayfaListesi = [BirinciSayfa(), IkinciSayfa(), UcuncuSayfa()];
   int secilenIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: sayfaListesi[secilenIndex],
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Container(child: Image.asset("resimler/birinci_sayfa/ev_buton.png")), label: ""),
-        
-        BottomNavigationBarItem(icon: Image.asset("resimler/birinci_sayfa/arama_buton.png"), label: "" ),
-        
-        BottomNavigationBarItem(icon: Image.asset("resimler/birinci_sayfa/kontrol_buton.png"), label: "" ),
-        
-        BottomNavigationBarItem(icon: Image.asset("resimler/birinci_sayfa/bildirim_buton.png"), label: "" ),
-      
-        BottomNavigationBarItem(icon: Image.asset("resimler/birinci_sayfa/sol_ust_kadin.png"), label: ""),
-      ]),
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          height: 60,
+          padding: EdgeInsets.all(12),
+          margin: EdgeInsets.symmetric(horizontal: 24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade500,
+                blurRadius: 10,
+                spreadRadius: 0.2,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              // Ana Sayfa Buton
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    secilenIndex = 0;
+                  });
+                },
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("resimler/birinci_sayfa/ev_buton.png"),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+
+              // Arama Butonu
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("resimler/birinci_sayfa/arama_buton.png"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+              // Kontrol Butonu
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    secilenIndex = 1;
+                  });
+                },
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "resimler/birinci_sayfa/kontrol_buton.png",
+                      ),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+
+              // Bildirim Butonu
+              InkWell(
+                onTap: (){
+                    setState(() {
+                      secilenIndex = 2;
+                    });
+                  },
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "resimler/birinci_sayfa/bildirim_buton.png",
+                      ),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+
+              // Profil Foto
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "resimler/birinci_sayfa/sol_ust_kadin.png",
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
 
 class BirinciSayfa extends StatelessWidget {
-  const BirinciSayfa({
-    super.key,
-  });
+  const BirinciSayfa({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +163,7 @@ class BirinciSayfa extends StatelessWidget {
                               ),
                             ),
                           ),
-    
+
                           // HELLO YAZISI
                           Container(
                             margin: EdgeInsets.only(left: 10),
@@ -78,7 +175,7 @@ class BirinciSayfa extends StatelessWidget {
                               ),
                             ),
                           ),
-    
+
                           // USERNAME YAZISI
                           Container(
                             child: Text(
@@ -96,7 +193,7 @@ class BirinciSayfa extends StatelessWidget {
                 ],
               ),
             ),
-    
+
             // İKİNCİ SATIR
             Row(
               children: [
@@ -115,7 +212,7 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-    
+
                         // TASKS TODAY  YAZISI
                         Container(
                           margin: EdgeInsets.only(left: 10),
@@ -133,7 +230,7 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             // ÜÇÜNCÜ SATIR
             Row(
               children: [
@@ -153,8 +250,7 @@ class BirinciSayfa extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 // BİRİNCİ YAZI
                                 Row(
@@ -172,7 +268,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // İKİNCİ BAYRAKLI YAZI
                                 Row(
                                   children: [
@@ -191,7 +287,7 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             Container(
                                               child: Text(
                                                 "Oct 25, 2025",
@@ -207,7 +303,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // ÜÇÜNCÜ YAZI
                                 Row(
                                   children: [
@@ -224,7 +320,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // DÖRDÜNCÜ KONTEYNERLER
                                 Row(
                                   children: [
@@ -256,12 +352,10 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             // İKİNCİ KONTEYNER
                                             Container(
-                                              margin: EdgeInsets.only(
-                                                left: 10,
-                                              ),
+                                              margin: EdgeInsets.only(left: 10),
                                               alignment: Alignment.center,
                                               height: 37,
                                               width: 72,
@@ -290,7 +384,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // BEŞİNCİ FOTOĞRAFLAR
                                 Row(
                                   children: [
@@ -314,7 +408,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // ikinci resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -330,7 +424,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // üçüncü resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -346,7 +440,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // dördüncü resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -365,12 +459,10 @@ class BirinciSayfa extends StatelessWidget {
                                                 ],
                                               ),
                                             ),
-    
+
                                             // +4 YAZISI
                                             Container(
-                                              margin: EdgeInsets.only(
-                                                left: 5,
-                                              ),
+                                              margin: EdgeInsets.only(left: 5),
                                               child: Text(
                                                 "+4",
                                                 style: TextStyle(
@@ -389,9 +481,9 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-    
+
                         SizedBox(width: 10),
-    
+
                         // 2. BÜYÜK KONTEYNER
                         Container(
                           width: 245,
@@ -402,8 +494,7 @@ class BirinciSayfa extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 // BİRİNCİ YAZI
                                 Row(
@@ -421,7 +512,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // İKİNCİ BAYRAKLI YAZI
                                 Row(
                                   children: [
@@ -440,7 +531,7 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             Container(
                                               child: Text(
                                                 "Oct 25, 2025",
@@ -456,7 +547,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // ÜÇÜNCÜ YAZI
                                 Row(
                                   children: [
@@ -473,7 +564,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // DÖRDÜNCÜ KONTEYNERLER
                                 Row(
                                   children: [
@@ -505,12 +596,10 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             // İKİNCİ KONTEYNER
                                             Container(
-                                              margin: EdgeInsets.only(
-                                                left: 10,
-                                              ),
+                                              margin: EdgeInsets.only(left: 10),
                                               alignment: Alignment.center,
                                               height: 37,
                                               width: 72,
@@ -539,7 +628,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // BEŞİNCİ FOTOĞRAFLAR
                                 Row(
                                   children: [
@@ -563,7 +652,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // ikinci resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -579,7 +668,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // üçüncü resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -595,7 +684,7 @@ class BirinciSayfa extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-    
+
                                                   // dördüncü resim
                                                   Container(
                                                     margin: EdgeInsets.only(
@@ -614,12 +703,10 @@ class BirinciSayfa extends StatelessWidget {
                                                 ],
                                               ),
                                             ),
-    
+
                                             // +4 YAZISI
                                             Container(
-                                              margin: EdgeInsets.only(
-                                                left: 5,
-                                              ),
+                                              margin: EdgeInsets.only(left: 5),
                                               child: Text(
                                                 "+4",
                                                 style: TextStyle(
@@ -638,7 +725,7 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-    
+
                         SizedBox(width: 30),
                       ],
                     ),
@@ -646,13 +733,13 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             // Dördüncü Satır
             Row(
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(top: 10),
+                    margin: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
                         Container(
@@ -678,12 +765,7 @@ class BirinciSayfa extends StatelessWidget {
                           width: 32,
                           height: 32,
                           child: CircleAvatar(
-                            backgroundColor: Color.fromARGB(
-                              255,
-                              226,
-                              238,
-                              238,
-                            ),
+                            backgroundColor: Color.fromARGB(255, 226, 238, 238),
                             child: Text("3"),
                           ),
                         ),
@@ -693,7 +775,7 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             // BEŞİNCİ SATIR
             Row(
               children: [
@@ -713,12 +795,9 @@ class BirinciSayfa extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 15,
-                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -740,7 +819,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // İKİNCİ SATIR
                                 Row(
                                   children: [
@@ -755,7 +834,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // ÜÇÜNCÜ SATIR
                                 Row(
                                   children: [
@@ -774,7 +853,7 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             Container(
                                               child: Text(
                                                 "Oct 25, 2025",
@@ -794,7 +873,7 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-    
+
                         // İKİNCİ KONTEYNER
                         Container(
                           margin: EdgeInsets.only(right: 10),
@@ -805,12 +884,9 @@ class BirinciSayfa extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 15,
-                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -832,7 +908,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // İKİNCİ SATIR
                                 Row(
                                   children: [
@@ -847,7 +923,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // ÜÇÜNCÜ SATIR
                                 Row(
                                   children: [
@@ -866,7 +942,7 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             Container(
                                               child: Text(
                                                 "Oct 25, 2025",
@@ -886,7 +962,7 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-    
+
                         // ÜÇÜNCÜ KONTEYNER
                         Container(
                           width: 160,
@@ -896,12 +972,9 @@ class BirinciSayfa extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 15,
-                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
                             child: Column(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -923,7 +996,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // İKİNCİ SATIR
                                 Row(
                                   children: [
@@ -938,7 +1011,7 @@ class BirinciSayfa extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-    
+
                                 // ÜÇÜNCÜ SATIR
                                 Row(
                                   children: [
@@ -957,7 +1030,7 @@ class BirinciSayfa extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-    
+
                                             Container(
                                               child: Text(
                                                 "Oct 25, 2025",
@@ -984,13 +1057,13 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             // ALTINCI SATIR
             Row(
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(top: 10),
+                    margin: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
                         Container(
@@ -1016,12 +1089,7 @@ class BirinciSayfa extends StatelessWidget {
                           width: 32,
                           height: 32,
                           child: CircleAvatar(
-                            backgroundColor: Color.fromARGB(
-                              255,
-                              255,
-                              231,
-                              205,
-                            ),
+                            backgroundColor: Color.fromARGB(255, 255, 231, 205),
                             child: Text("3"),
                           ),
                         ),
@@ -1031,7 +1099,7 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             // YEDİNCİ SATIR
             Row(
               children: [
@@ -1072,7 +1140,7 @@ class BirinciSayfa extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                              
+
                                   // İKİNCİ SATIR
                                   Row(
                                     children: [
@@ -1083,16 +1151,30 @@ class BirinciSayfa extends StatelessWidget {
                                             children: [
                                               Container(
                                                 width: 24,
-                                                decoration: BoxDecoration(image: DecorationImage(image: AssetImage("resimler/birinci_sayfa/gri_bayrak.png"))),
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                      "resimler/birinci_sayfa/gri_bayrak.png",
+                                                    ),
+                                                  ),
+                                                ),
                                               ),
                                               Container(
-                                                padding: EdgeInsets.only(left: 5),
-                                                child: Text("6 hours", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),),
-                                              )
+                                                padding: EdgeInsets.only(
+                                                  left: 5,
+                                                ),
+                                                child: Text(
+                                                  "6 hours",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                  ),
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -1100,20 +1182,26 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                           // İKİNCİ SÜTÜN
-                          Flexible(flex: 3, child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  width: 24,
-                                  decoration: BoxDecoration(
-       
-                                    image: DecorationImage(image: AssetImage("resimler/birinci_sayfa/kontrol_kutu.png"))
+                          Flexible(
+                            flex: 3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    width: 24,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                          "resimler/birinci_sayfa/kontrol_kutu.png",
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              )
-                            ],
-                          )),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -1121,6 +1209,8 @@ class BirinciSayfa extends StatelessWidget {
                 ),
               ],
             ),
+
+            SizedBox(height: 100),
           ],
         ),
       ),
