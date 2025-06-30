@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:row_column_tekrar/tasarim_tekrar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 170, 178, 130),
-          title: Text("Row - Column Tekrar"),
-          foregroundColor: Colors.white,
-        ),
-      ),
+      home: TasarimTekrar(),
     );
   }
 }
