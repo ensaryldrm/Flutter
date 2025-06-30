@@ -21,7 +21,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
         child: Column(
           children: [
             Container(
-              height: 729,
+              height: 800,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

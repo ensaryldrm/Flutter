@@ -17,123 +17,125 @@ class _AnaSayfaState extends State<AnaSayfa> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: sayfaListesi[secilenIndex],
-      bottomNavigationBar: SafeArea(
-        child: Container(
-          height: 60,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(horizontal: 24),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade500,
-                blurRadius: 10,
-                spreadRadius: 0.2,
-                offset: Offset(0, 0),
-              ),
-            ],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              // Ana Sayfa Buton
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    secilenIndex = 0;
-                  });
-                },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("resimler/birinci_sayfa/ev_buton.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-
-              // Arama Butonu
-              Container(
+      bottomNavigationBar: Container(
+        height: 60,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.only(bottom: 30, left: 20, right: 20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade500,
+              blurRadius: 10,
+              spreadRadius: 0.2,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // Ana Sayfa Buton
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 0;
+                });
+              },
+              child: Container(
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("resimler/birinci_sayfa/arama_buton.png"),
+                    image: AssetImage("resimler/birinci_sayfa/ev_buton.png"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
+            ),
 
-              // Kontrol Butonu
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    secilenIndex = 1;
-                  });
-                },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "resimler/birinci_sayfa/kontrol_buton.png",
-                      ),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+            // Arama Butonu
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("resimler/birinci_sayfa/arama_buton.png"),
+                  fit: BoxFit.contain,
                 ),
               ),
+            ),
 
-              // Bildirim Butonu
-              InkWell(
-                onTap: (){
-                    setState(() {
-                      secilenIndex = 2;
-                    });
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "resimler/birinci_sayfa/bildirim_buton.png",
-                      ),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-
-              // Profil Foto
-              Container(
+            // Kontrol Butonu
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 1;
+                });
+              },
+              child: Container(
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      "resimler/birinci_sayfa/sol_ust_kadin.png",
+                      "resimler/birinci_sayfa/kontrol_buton.png",
                     ),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+
+            // Bildirim Butonu
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 2;
+                });
+              },
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "resimler/birinci_sayfa/bildirim_buton.png",
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+
+            // Profil Foto
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("resimler/birinci_sayfa/sol_ust_kadin.png"),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class BirinciSayfa extends StatelessWidget {
+class BirinciSayfa extends StatefulWidget {
   const BirinciSayfa({super.key});
 
+  @override
+  State<BirinciSayfa> createState() => _BirinciSayfaState();
+}
+
+class _BirinciSayfaState extends State<BirinciSayfa> {
+  bool basildiMi = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -1190,12 +1192,13 @@ class BirinciSayfa extends StatelessWidget {
                                 Expanded(
                                   child: Container(
                                     width: 24,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          "resimler/birinci_sayfa/kontrol_kutu.png",
-                                        ),
-                                      ),
+                                    child: Checkbox(
+                                      value: basildiMi,
+                                      onChanged: (deger) {
+                                        setState(() {
+                                          basildiMi = !basildiMi;
+                                        });
+                                      },
                                     ),
                                   ),
                                 ),
