@@ -62,7 +62,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                       ],
                     ),
                   ),
-                  
+
                   // ikinci row
                   Flexible(
                     flex: 1,
@@ -661,7 +661,10 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                 // YAZILAR
                                                                 Expanded(
                                                                   child: Container(
-                                                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                                                    margin: EdgeInsets.symmetric(
+                                                                      horizontal:
+                                                                          10,
+                                                                    ),
                                                                     height: 97,
                                                                     child: Column(
                                                                       mainAxisAlignment:
@@ -735,7 +738,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                     ),
                                   ],
                                 ),
-                              
+
                                 // DÖRDÜNCÜ SATIR
                                 Row(
                                   children: [
@@ -1078,7 +1081,10 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                 // YAZILAR
                                                                 Expanded(
                                                                   child: Container(
-                                                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                                                    margin: EdgeInsets.symmetric(
+                                                                      horizontal:
+                                                                          10,
+                                                                    ),
                                                                     height: 97,
                                                                     child: Column(
                                                                       mainAxisAlignment:
@@ -1152,7 +1158,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                     ),
                                   ],
                                 ),
-                                
+
                                 // YEDİNCİ SATIR
                                 Row(
                                   children: [
