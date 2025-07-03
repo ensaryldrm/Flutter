@@ -11,6 +11,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      /* theme: ThemeData(
+        elevatedButtonTheme:
+            ElevatedButtonThemeData(
+              style:
+                  ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Colors.pink,
+                  ),
+            ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.red,
+          foregroundColor: Colors.black,
+        ),
+        primaryColor: Colors.white,
+        brightness: Brightness.light,
+      ), */
       debugShowCheckedModeBanner: false,
       home: AnaSayfa(),
     );

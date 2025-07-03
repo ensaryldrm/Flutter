@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-class UcuncuSayfa extends StatefulWidget {
+class UcuncuSayfa
+    extends StatefulWidget {
   const UcuncuSayfa({super.key});
 
   @override
-  State<UcuncuSayfa> createState() => _UcuncuSayfaState();
+  State<UcuncuSayfa> createState() =>
+      _UcuncuSayfaState();
 }
 
-class _UcuncuSayfaState extends State<UcuncuSayfa> {
+class _UcuncuSayfaState
+    extends State<UcuncuSayfa> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -23,7 +26,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
             Container(
               height: 800,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment:
+                    MainAxisAlignment
+                        .spaceBetween,
                 children: [
                   // birinci row
                   Flexible(
@@ -45,8 +50,12 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(left: 5),
-                                  width: 34,
+                                  margin: EdgeInsets.only(
+                                    left:
+                                        5,
+                                  ),
+                                  width:
+                                      34,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -78,10 +87,11 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                     Expanded(
                                       child: Container(
                                         alignment: Alignment.center,
-                                        padding: EdgeInsets.only(left: 5),
+                                        padding: EdgeInsets.only(
+                                          left: 5,
+                                        ),
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             // YAZI 1
                                             Container(
@@ -196,8 +206,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                         ),
                                         alignment: Alignment.center,
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             // YAZI 1
                                             Container(
@@ -317,7 +326,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                         Expanded(
                           child: Container(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceBetween,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -374,10 +385,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                         233,
                                                         209,
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(
+                                                        20,
+                                                      ),
                                                     ),
                                                     child: Row(
                                                       children: [
@@ -390,26 +400,22 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                   width: 6,
                                                                   height: 41,
                                                                   decoration: BoxDecoration(
-                                                                    color:
-                                                                        Color.fromARGB(
-                                                                          255,
-                                                                          252,
-                                                                          151,
-                                                                          41,
-                                                                        ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                          5,
-                                                                        ),
+                                                                    color: Color.fromARGB(
+                                                                      255,
+                                                                      252,
+                                                                      151,
+                                                                      41,
+                                                                    ),
+                                                                    borderRadius: BorderRadius.circular(
+                                                                      5,
+                                                                    ),
                                                                   ),
                                                                 ),
 
                                                                 // YAZILAR
                                                                 Container(
                                                                   child: Column(
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
+                                                                    mainAxisAlignment: MainAxisAlignment.center,
                                                                     children: [
                                                                       // ÜST YAZI
                                                                       Row(
@@ -418,12 +424,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                19,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 19,
                                                                             child: Text(
                                                                               "Project Discussion",
                                                                               style: TextStyle(
@@ -442,12 +445,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                19,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 19,
                                                                             child: Text(
                                                                               "09:00AM - 10:00AM",
                                                                               style: TextStyle(
@@ -533,14 +533,11 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                 children: [
                                                   // KÜÇÜK KONTEYNER
                                                   Container(
-                                                    alignment:
-                                                        Alignment.centerLeft,
+                                                    alignment: Alignment.centerLeft,
                                                     width: 48,
                                                     height: 64,
                                                     child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         // BİRİNCİ YAZI
                                                         Container(
@@ -549,9 +546,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                             "11:00",
                                                             style: TextStyle(
                                                               fontSize: 14,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
+                                                              fontWeight: FontWeight.w700,
                                                             ),
                                                           ),
                                                         ),
@@ -561,17 +556,15 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                           width: 10,
                                                           height: 10,
                                                           decoration: BoxDecoration(
-                                                            borderRadius:
-                                                                BorderRadius.circular(
-                                                                  100,
-                                                                ),
-                                                            color:
-                                                                Color.fromARGB(
-                                                                  255,
-                                                                  62,
-                                                                  194,
-                                                                  184,
-                                                                ),
+                                                            borderRadius: BorderRadius.circular(
+                                                              100,
+                                                            ),
+                                                            color: Color.fromARGB(
+                                                              255,
+                                                              62,
+                                                              194,
+                                                              184,
+                                                            ),
                                                           ),
                                                         ),
 
@@ -582,9 +575,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                             "12:00",
                                                             style: TextStyle(
                                                               fontSize: 14,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
+                                                              fontWeight: FontWeight.w700,
                                                             ),
                                                           ),
                                                         ),
@@ -616,10 +607,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                     ),
                                                     width: 335,
                                                     decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(
+                                                        20,
+                                                      ),
                                                       color: Color.fromARGB(
                                                         255,
                                                         233,
@@ -636,25 +626,21 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                               children: [
                                                                 // KÜÇÜK MAVİ KONTEYNER
                                                                 Container(
-                                                                  margin:
-                                                                      EdgeInsets.only(
-                                                                        left:
-                                                                            20,
-                                                                      ),
+                                                                  margin: EdgeInsets.only(
+                                                                    left: 20,
+                                                                  ),
                                                                   width: 6,
                                                                   height: 97,
                                                                   decoration: BoxDecoration(
-                                                                    color:
-                                                                        Color.fromARGB(
-                                                                          255,
-                                                                          62,
-                                                                          194,
-                                                                          184,
-                                                                        ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                          5,
-                                                                        ),
+                                                                    color: Color.fromARGB(
+                                                                      255,
+                                                                      62,
+                                                                      194,
+                                                                      184,
+                                                                    ),
+                                                                    borderRadius: BorderRadius.circular(
+                                                                      5,
+                                                                    ),
                                                                   ),
                                                                 ),
 
@@ -662,14 +648,11 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                 Expanded(
                                                                   child: Container(
                                                                     margin: EdgeInsets.symmetric(
-                                                                      horizontal:
-                                                                          10,
+                                                                      horizontal: 10,
                                                                     ),
                                                                     height: 97,
                                                                     child: Column(
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .spaceBetween,
+                                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                       children: [
                                                                         // YAZI 1
                                                                         Row(
@@ -794,10 +777,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                         236,
                                                         250,
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(
+                                                        20,
+                                                      ),
                                                     ),
                                                     child: Row(
                                                       children: [
@@ -810,26 +792,22 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                   width: 6,
                                                                   height: 41,
                                                                   decoration: BoxDecoration(
-                                                                    color:
-                                                                        Color.fromARGB(
-                                                                          255,
-                                                                          252,
-                                                                          151,
-                                                                          41,
-                                                                        ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                          5,
-                                                                        ),
+                                                                    color: Color.fromARGB(
+                                                                      255,
+                                                                      252,
+                                                                      151,
+                                                                      41,
+                                                                    ),
+                                                                    borderRadius: BorderRadius.circular(
+                                                                      5,
+                                                                    ),
                                                                   ),
                                                                 ),
 
                                                                 // YAZILAR
                                                                 Container(
                                                                   child: Column(
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
+                                                                    mainAxisAlignment: MainAxisAlignment.center,
                                                                     children: [
                                                                       // ÜST YAZI
                                                                       Row(
@@ -838,12 +816,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                19,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 19,
                                                                             child: Text(
                                                                               "Lunch time",
                                                                               style: TextStyle(
@@ -862,12 +837,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                19,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 19,
                                                                             child: Text(
                                                                               "09:00AM - 10:00AM",
                                                                               style: TextStyle(
@@ -953,14 +925,11 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                 children: [
                                                   // KÜÇÜK KONTEYNER
                                                   Container(
-                                                    alignment:
-                                                        Alignment.centerLeft,
+                                                    alignment: Alignment.centerLeft,
                                                     width: 48,
                                                     height: 64,
                                                     child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         // BİRİNCİ YAZI
                                                         Container(
@@ -969,9 +938,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                             "15:00",
                                                             style: TextStyle(
                                                               fontSize: 14,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
+                                                              fontWeight: FontWeight.w700,
                                                             ),
                                                           ),
                                                         ),
@@ -981,17 +948,15 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                           width: 10,
                                                           height: 10,
                                                           decoration: BoxDecoration(
-                                                            borderRadius:
-                                                                BorderRadius.circular(
-                                                                  100,
-                                                                ),
-                                                            color:
-                                                                Color.fromARGB(
-                                                                  255,
-                                                                  62,
-                                                                  194,
-                                                                  184,
-                                                                ),
+                                                            borderRadius: BorderRadius.circular(
+                                                              100,
+                                                            ),
+                                                            color: Color.fromARGB(
+                                                              255,
+                                                              62,
+                                                              194,
+                                                              184,
+                                                            ),
                                                           ),
                                                         ),
 
@@ -1002,9 +967,7 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                             "16:00",
                                                             style: TextStyle(
                                                               fontSize: 14,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w700,
+                                                              fontWeight: FontWeight.w700,
                                                             ),
                                                           ),
                                                         ),
@@ -1036,10 +999,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                     ),
                                                     width: 335,
                                                     decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(
+                                                        20,
+                                                      ),
                                                       color: Color.fromARGB(
                                                         255,
                                                         218,
@@ -1056,25 +1018,21 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                               children: [
                                                                 // KÜÇÜK MAVİ KONTEYNER
                                                                 Container(
-                                                                  margin:
-                                                                      EdgeInsets.only(
-                                                                        left:
-                                                                            20,
-                                                                      ),
+                                                                  margin: EdgeInsets.only(
+                                                                    left: 20,
+                                                                  ),
                                                                   width: 6,
                                                                   height: 97,
                                                                   decoration: BoxDecoration(
-                                                                    color:
-                                                                        Color.fromARGB(
-                                                                          255,
-                                                                          131,
-                                                                          210,
-                                                                          241,
-                                                                        ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                          5,
-                                                                        ),
+                                                                    color: Color.fromARGB(
+                                                                      255,
+                                                                      131,
+                                                                      210,
+                                                                      241,
+                                                                    ),
+                                                                    borderRadius: BorderRadius.circular(
+                                                                      5,
+                                                                    ),
                                                                   ),
                                                                 ),
 
@@ -1082,14 +1040,11 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                 Expanded(
                                                                   child: Container(
                                                                     margin: EdgeInsets.symmetric(
-                                                                      horizontal:
-                                                                          10,
+                                                                      horizontal: 10,
                                                                     ),
                                                                     height: 97,
                                                                     child: Column(
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .spaceBetween,
+                                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                       children: [
                                                                         // YAZI 1
                                                                         Row(
@@ -1214,10 +1169,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                         251,
                                                         232,
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(
+                                                        20,
+                                                      ),
                                                     ),
                                                     child: Row(
                                                       children: [
@@ -1230,26 +1184,22 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                   width: 6,
                                                                   height: 41,
                                                                   decoration: BoxDecoration(
-                                                                    color:
-                                                                        Color.fromARGB(
-                                                                          255,
-                                                                          84,
-                                                                          201,
-                                                                          45,
-                                                                        ),
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                          5,
-                                                                        ),
+                                                                    color: Color.fromARGB(
+                                                                      255,
+                                                                      84,
+                                                                      201,
+                                                                      45,
+                                                                    ),
+                                                                    borderRadius: BorderRadius.circular(
+                                                                      5,
+                                                                    ),
                                                                   ),
                                                                 ),
 
                                                                 // YAZILAR
                                                                 Container(
                                                                   child: Column(
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
+                                                                    mainAxisAlignment: MainAxisAlignment.center,
                                                                     children: [
                                                                       // ÜST YAZI
                                                                       Row(
@@ -1258,12 +1208,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                20,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 20,
                                                                             child: Text(
                                                                               "Team Meating",
                                                                               style: TextStyle(
@@ -1282,12 +1229,9 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                             padding: EdgeInsets.only(
                                                                               left: 10,
                                                                             ),
-                                                                            alignment:
-                                                                                Alignment.centerLeft,
-                                                                            width:
-                                                                                171,
-                                                                            height:
-                                                                                19,
+                                                                            alignment: Alignment.centerLeft,
+                                                                            width: 171,
+                                                                            height: 19,
                                                                             child: Text(
                                                                               "09:00AM - 10:00AM",
                                                                               style: TextStyle(
@@ -1298,8 +1242,6 @@ class _UcuncuSayfaState extends State<UcuncuSayfa> {
                                                                           ),
                                                                         ],
                                                                       ),
-
-                                                                      // ALTI YAZI
                                                                     ],
                                                                   ),
                                                                 ),

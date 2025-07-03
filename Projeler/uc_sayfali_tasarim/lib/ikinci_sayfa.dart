@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:uc_sayfali_tasarim/ana_sayfa.dart';
 
-class IkinciSayfa extends StatefulWidget {
+class IkinciSayfa
+    extends StatefulWidget {
   const IkinciSayfa({super.key});
 
   @override
-  State<IkinciSayfa> createState() => _IkinciSayfaState();
+  State<IkinciSayfa> createState() =>
+      _IkinciSayfaState();
 }
 
-class _IkinciSayfaState extends State<IkinciSayfa> {
+class _IkinciSayfaState
+    extends State<IkinciSayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 50,
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -24,7 +31,9 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                     child: Container(
                       height: 34,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment:
+                            MainAxisAlignment
+                                .spaceBetween,
                         children: [
                           // GERİ BUTON
                           GestureDetector(
@@ -32,13 +41,17 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (builder) => AnaSayfa(),
+                                  builder:
+                                      (
+                                        builder,
+                                      ) => AnaSayfa(),
                                 ),
                               );
                             },
                             child: Container(
                               width: 34,
-                              height: 34,
+                              height:
+                                  34,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(
@@ -51,14 +64,18 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
 
                           // Yazı
                           Container(
-                            alignment: Alignment.center,
+                            alignment:
+                                Alignment
+                                    .center,
                             width: 259,
                             height: 23,
                             child: Text(
                               "Today task",
                               style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
+                                fontSize:
+                                    16,
+                                fontWeight:
+                                    FontWeight.w400,
                               ),
                             ),
                           ),
@@ -87,10 +104,15 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                 children: [
                   Expanded(
                     child: Container(
-                      margin: EdgeInsets.only(top: 10),
+                      margin:
+                          EdgeInsets.only(
+                            top: 10,
+                          ),
                       height: 301,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment:
+                            MainAxisAlignment
+                                .spaceAround,
                         children: [
                           // İLK YAZI
                           Row(
@@ -99,8 +121,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                 child: Text(
                                   "UX Desing for MONS\ncalendar",
                                   style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w700,
+                                    fontSize:
+                                        24,
+                                    fontWeight:
+                                        FontWeight.w700,
                                   ),
                                 ),
                               ),
@@ -112,8 +136,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                             children: [
                               // kadın foto
                               Container(
-                                width: 32,
-                                height: 32,
+                                width:
+                                    32,
+                                height:
+                                    32,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
@@ -125,12 +151,17 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
 
                               // Birinci Yazı
                               Container(
-                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                margin: EdgeInsets.symmetric(
+                                  horizontal:
+                                      10,
+                                ),
                                 child: Text(
                                   "Created by",
                                   style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
+                                    fontSize:
+                                        14,
+                                    fontWeight:
+                                        FontWeight.w400,
                                   ),
                                 ),
                               ),
@@ -140,8 +171,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                 child: Text(
                                   "Username",
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
+                                    fontSize:
+                                        16,
+                                    fontWeight:
+                                        FontWeight.w700,
                                   ),
                                 ),
                               ),
@@ -170,7 +203,8 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                             children: [
                               Expanded(
                                 child: Container(
-                                  height: 24,
+                                  height:
+                                      24,
                                   child: Row(
                                     children: [
                                       Container(
@@ -235,7 +269,9 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
 
                                       // İKİNCİ KONTEYNER
                                       Container(
-                                        margin: EdgeInsets.only(left: 10),
+                                        margin: EdgeInsets.only(
+                                          left: 10,
+                                        ),
                                         alignment: Alignment.center,
                                         height: 37,
                                         width: 72,
@@ -262,7 +298,9 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
 
                                       // Birinci Yazı
                                       Container(
-                                        margin: EdgeInsets.only(left: 5),
+                                        margin: EdgeInsets.only(
+                                          left: 5,
+                                        ),
                                         child: Text(
                                           "stop starting, start finishing",
                                           style: TextStyle(
@@ -303,7 +341,9 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                             ),
                                             // +4 YAZISI
                                             Container(
-                                              margin: EdgeInsets.only(left: 5),
+                                              margin: EdgeInsets.only(
+                                                left: 5,
+                                              ),
                                               child: Text(
                                                 "+4",
                                                 style: TextStyle(
@@ -332,12 +372,17 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
+                    margin:
+                        EdgeInsets.symmetric(
+                          vertical: 10,
+                        ),
                     child: Text(
                       "Subtask",
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.w700,
+                        fontWeight:
+                            FontWeight
+                                .w700,
                       ),
                     ),
                   ),
@@ -349,32 +394,50 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                 height: 233,
                 width: 335,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment:
+                      MainAxisAlignment
+                          .spaceAround,
                   children: [
                     // birinci konteyner
                     Row(
                       children: [
                         Expanded(
                           child: Container(
-                            margin: EdgeInsets.only(right: 30),
+                            margin:
+                                EdgeInsets.only(
+                                  right:
+                                      30,
+                                ),
                             height: 88,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 233, 245, 245),
-                              borderRadius: BorderRadius.circular(20),
+                              color:
+                                  Color.fromARGB(
+                                    255,
+                                    233,
+                                    245,
+                                    245,
+                                  ),
+                              borderRadius:
+                                  BorderRadius.circular(
+                                    20,
+                                  ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(10),
+                              padding:
+                                  const EdgeInsets.all(
+                                    10,
+                                  ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   // BİRİNCİ SÜTUN
                                   Flexible(
-                                    flex: 7,
+                                    flex:
+                                        7,
                                     child: Container(
                                       child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           // BİRİNCİ SATIR
                                           Row(
@@ -386,8 +449,7 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                                     "UX Desing for MONS calendar",
                                                     style: TextStyle(
                                                       fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w700,
+                                                      fontWeight: FontWeight.w700,
                                                     ),
                                                   ),
                                                 ),
@@ -414,15 +476,13 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                              left: 5,
-                                                            ),
+                                                        padding: EdgeInsets.only(
+                                                          left: 5,
+                                                        ),
                                                         child: Text(
                                                           "6 hours",
                                                           style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
+                                                            fontWeight: FontWeight.w400,
                                                             fontSize: 14,
                                                           ),
                                                         ),
@@ -439,10 +499,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                   ),
                                   // İKİNCİ SÜTÜN
                                   Flexible(
-                                    flex: 3,
+                                    flex:
+                                        3,
                                     child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Expanded(
                                           child: Container(
@@ -472,25 +532,41 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                       children: [
                         Expanded(
                           child: Container(
-                            margin: EdgeInsets.only(right: 30),
+                            margin:
+                                EdgeInsets.only(
+                                  right:
+                                      30,
+                                ),
                             height: 88,
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 228, 242, 251),
-                              borderRadius: BorderRadius.circular(20),
+                              color:
+                                  Color.fromARGB(
+                                    255,
+                                    228,
+                                    242,
+                                    251,
+                                  ),
+                              borderRadius:
+                                  BorderRadius.circular(
+                                    20,
+                                  ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(10),
+                              padding:
+                                  const EdgeInsets.all(
+                                    10,
+                                  ),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   // BİRİNCİ SÜTUN
                                   Flexible(
-                                    flex: 7,
+                                    flex:
+                                        7,
                                     child: Container(
                                       child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           // BİRİNCİ SATIR
                                           Row(
@@ -502,8 +578,7 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                                     "UX Desing for MONS calendar",
                                                     style: TextStyle(
                                                       fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w700,
+                                                      fontWeight: FontWeight.w700,
                                                     ),
                                                   ),
                                                 ),
@@ -530,15 +605,13 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                                         ),
                                                       ),
                                                       Container(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                              left: 5,
-                                                            ),
+                                                        padding: EdgeInsets.only(
+                                                          left: 5,
+                                                        ),
                                                         child: Text(
                                                           "6 hours",
                                                           style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
+                                                            fontWeight: FontWeight.w400,
                                                             fontSize: 14,
                                                           ),
                                                         ),
@@ -555,10 +628,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                                   ),
                                   // İKİNCİ SÜTÜN
                                   Flexible(
-                                    flex: 3,
+                                    flex:
+                                        3,
                                     child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Expanded(
                                           child: Container(
@@ -591,8 +664,10 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                             children: [
                               // artı
                               Container(
-                                width: 16,
-                                height: 16,
+                                width:
+                                    16,
+                                height:
+                                    16,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
@@ -604,11 +679,19 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
 
                               // yazı
                               Container(
-                                margin: EdgeInsets.only(left: 5),
+                                margin: EdgeInsets.only(
+                                  left:
+                                      5,
+                                ),
                                 child: Text(
                                   "Add subtask",
                                   style: TextStyle(
-                                    color: Color.fromARGB(255, 60, 137, 241),
+                                    color: Color.fromARGB(
+                                      255,
+                                      60,
+                                      137,
+                                      241,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -630,7 +713,9 @@ class _IkinciSayfaState extends State<IkinciSayfa> {
                         "Attachment",
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.w700,
+                          fontWeight:
+                              FontWeight
+                                  .w700,
                         ),
                       ),
                     ),
