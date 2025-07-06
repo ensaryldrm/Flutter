@@ -6,145 +6,175 @@ class AnaSayfa extends StatefulWidget {
   const AnaSayfa({super.key});
 
   @override
-  State<AnaSayfa> createState() => _AnaSayfaState();
+  State<AnaSayfa> createState() =>
+      _AnaSayfaState();
 }
 
-class _AnaSayfaState extends State<AnaSayfa> {
-  List<Widget> sayfaListesi = [BirinciSayfa(), IkinciSayfa(), UcuncuSayfa()];
+class _AnaSayfaState
+    extends State<AnaSayfa> {
+  List<Widget> sayfaListesi = [
+    BirinciSayfa(),
+    IkinciSayfa(),
+    UcuncuSayfa(),
+  ];
   int secilenIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: sayfaListesi[secilenIndex],
-      bottomNavigationBar: SafeArea(
-        child: Container(
-          height: 60,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.symmetric(horizontal: 24),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade500,
-                blurRadius: 10,
-                spreadRadius: 0.2,
-                offset: Offset(0, 0),
-              ),
-            ],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              // Ana Sayfa Buton
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    secilenIndex = 0;
-                  });
-                },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("resimler/birinci_sayfa/ev_buton.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-
-              // Arama Butonu
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("resimler/birinci_sayfa/arama_buton.png"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-
-              // Kontrol Butonu
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    secilenIndex = 1;
-                  });
-                },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "resimler/birinci_sayfa/kontrol_buton.png",
-                      ),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-
-              // Bildirim Butonu
-              InkWell(
-                onTap: (){
-                    setState(() {
-                      secilenIndex = 2;
-                    });
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "resimler/birinci_sayfa/bildirim_buton.png",
-                      ),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-
-              // Profil Foto
-              Container(
+      bottomNavigationBar: Container(
+        height: 60,
+        padding: EdgeInsets.all(12),
+        margin: EdgeInsets.only(
+          bottom: 30,
+          left: 20,
+          right: 20,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius:
+              BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color:
+                  Colors.grey.shade500,
+              blurRadius: 10,
+              spreadRadius: 0.2,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment:
+              MainAxisAlignment
+                  .spaceEvenly,
+          children: [
+            // Ana Sayfa Buton
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 0;
+                });
+              },
+              child: Container(
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      "resimler/birinci_sayfa/sol_ust_kadin.png",
+                      "resimler/birinci_sayfa/ev_buton.png",
                     ),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+
+            // Arama Butonu
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "resimler/birinci_sayfa/arama_buton.png",
+                  ),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+
+            // Kontrol Butonu
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 1;
+                });
+              },
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "resimler/birinci_sayfa/kontrol_buton.png",
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+
+            // Bildirim Butonu
+            InkWell(
+              onTap: () {
+                setState(() {
+                  secilenIndex = 2;
+                });
+              },
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "resimler/birinci_sayfa/bildirim_buton.png",
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+
+            // Profil Foto
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "resimler/birinci_sayfa/sol_ust_kadin.png",
+                  ),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class BirinciSayfa extends StatelessWidget {
+class BirinciSayfa
+    extends StatefulWidget {
   const BirinciSayfa({super.key});
 
+  @override
+  State<BirinciSayfa> createState() =>
+      _BirinciSayfaState();
+}
+
+class _BirinciSayfaState
+    extends State<BirinciSayfa> {
+  bool basildiMi = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
       // SOLDA HEP SABİT 30 PİKSEL BOŞLUK OLACAK
-      padding: const EdgeInsets.only(left: 30),
+      padding: const EdgeInsets.only(
+        left: 30,
+      ),
       child: SingleChildScrollView(
         child: Column(
           children: [
             // BİRİNCİ SATIR
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding:
+                  const EdgeInsets.only(
+                    top: 50,
+                  ),
               child: Row(
                 children: [
                   Expanded(
@@ -166,12 +196,18 @@ class BirinciSayfa extends StatelessWidget {
 
                           // HELLO YAZISI
                           Container(
-                            margin: EdgeInsets.only(left: 10),
+                            margin:
+                                EdgeInsets.only(
+                                  left:
+                                      10,
+                                ),
                             child: Text(
                               "Hello,",
                               style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
+                                fontSize:
+                                    16,
+                                fontWeight:
+                                    FontWeight.w400,
                               ),
                             ),
                           ),
@@ -181,8 +217,10 @@ class BirinciSayfa extends StatelessWidget {
                             child: Text(
                               "Username",
                               style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
+                                fontSize:
+                                    16,
+                                fontWeight:
+                                    FontWeight.w700,
                               ),
                             ),
                           ),
@@ -199,7 +237,10 @@ class BirinciSayfa extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 20),
+                    margin:
+                        EdgeInsets.symmetric(
+                          vertical: 20,
+                        ),
                     child: Row(
                       children: [
                         // 4 NEW YAZISI
@@ -207,20 +248,30 @@ class BirinciSayfa extends StatelessWidget {
                           child: Text(
                             "4 New",
                             style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
+                              fontSize:
+                                  16,
+                              fontWeight:
+                                  FontWeight
+                                      .w700,
                             ),
                           ),
                         ),
 
                         // TASKS TODAY  YAZISI
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin:
+                              EdgeInsets.only(
+                                left:
+                                    10,
+                              ),
                           child: Text(
                             "tasks today",
                             style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontSize:
+                                  14,
+                              fontWeight:
+                                  FontWeight
+                                      .w400,
                             ),
                           ),
                         ),
@@ -238,19 +289,34 @@ class BirinciSayfa extends StatelessWidget {
                   child: Container(
                     height: 245,
                     child: ListView(
-                      scrollDirection: Axis.horizontal,
+                      scrollDirection:
+                          Axis.horizontal,
                       children: [
                         // 1. BÜYÜK KONTEYNER
                         Container(
                           width: 245,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Color.fromARGB(255, 255, 231, 205),
+                            borderRadius:
+                                BorderRadius.circular(
+                                  20,
+                                ),
+                            color:
+                                Color.fromARGB(
+                                  255,
+                                  255,
+                                  231,
+                                  205,
+                                ),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            padding: EdgeInsets.symmetric(
+                              horizontal:
+                                  15,
+                            ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceEvenly,
                               children: [
                                 // BİRİNCİ YAZI
                                 Row(
@@ -340,8 +406,9 @@ class BirinciSayfa extends StatelessWidget {
                                                   153,
                                                   35,
                                                 ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
+                                                borderRadius: BorderRadius.circular(
+                                                  20,
+                                                ),
                                               ),
                                               child: Text(
                                                 "High",
@@ -355,7 +422,9 @@ class BirinciSayfa extends StatelessWidget {
 
                                             // İKİNCİ KONTEYNER
                                             Container(
-                                              margin: EdgeInsets.only(left: 10),
+                                              margin: EdgeInsets.only(
+                                                left: 10,
+                                              ),
                                               alignment: Alignment.center,
                                               height: 37,
                                               width: 72,
@@ -366,8 +435,9 @@ class BirinciSayfa extends StatelessWidget {
                                                   104,
                                                   255,
                                                 ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
+                                                borderRadius: BorderRadius.circular(
+                                                  20,
+                                                ),
                                               ),
                                               child: Text(
                                                 "5 Scare",
@@ -462,7 +532,9 @@ class BirinciSayfa extends StatelessWidget {
 
                                             // +4 YAZISI
                                             Container(
-                                              margin: EdgeInsets.only(left: 5),
+                                              margin: EdgeInsets.only(
+                                                left: 5,
+                                              ),
                                               child: Text(
                                                 "+4",
                                                 style: TextStyle(
@@ -482,19 +554,35 @@ class BirinciSayfa extends StatelessWidget {
                           ),
                         ),
 
-                        SizedBox(width: 10),
+                        SizedBox(
+                          width: 10,
+                        ),
 
                         // 2. BÜYÜK KONTEYNER
                         Container(
                           width: 245,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Color.fromARGB(255, 194, 221, 254),
+                            borderRadius:
+                                BorderRadius.circular(
+                                  20,
+                                ),
+                            color:
+                                Color.fromARGB(
+                                  255,
+                                  194,
+                                  221,
+                                  254,
+                                ),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            padding: EdgeInsets.symmetric(
+                              horizontal:
+                                  15,
+                            ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceEvenly,
                               children: [
                                 // BİRİNCİ YAZI
                                 Row(
@@ -584,8 +672,9 @@ class BirinciSayfa extends StatelessWidget {
                                                   153,
                                                   35,
                                                 ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
+                                                borderRadius: BorderRadius.circular(
+                                                  20,
+                                                ),
                                               ),
                                               child: Text(
                                                 "High",
@@ -599,7 +688,9 @@ class BirinciSayfa extends StatelessWidget {
 
                                             // İKİNCİ KONTEYNER
                                             Container(
-                                              margin: EdgeInsets.only(left: 10),
+                                              margin: EdgeInsets.only(
+                                                left: 10,
+                                              ),
                                               alignment: Alignment.center,
                                               height: 37,
                                               width: 72,
@@ -610,8 +701,9 @@ class BirinciSayfa extends StatelessWidget {
                                                   104,
                                                   255,
                                                 ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
+                                                borderRadius: BorderRadius.circular(
+                                                  20,
+                                                ),
                                               ),
                                               child: Text(
                                                 "5 Scare",
@@ -706,7 +798,9 @@ class BirinciSayfa extends StatelessWidget {
 
                                             // +4 YAZISI
                                             Container(
-                                              margin: EdgeInsets.only(left: 5),
+                                              margin: EdgeInsets.only(
+                                                left: 5,
+                                              ),
                                               child: Text(
                                                 "+4",
                                                 style: TextStyle(
@@ -726,7 +820,9 @@ class BirinciSayfa extends StatelessWidget {
                           ),
                         ),
 
-                        SizedBox(width: 30),
+                        SizedBox(
+                          width: 30,
+                        ),
                       ],
                     ),
                   ),
@@ -739,25 +835,41 @@ class BirinciSayfa extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(top: 10, bottom: 10),
+                    margin:
+                        EdgeInsets.only(
+                          top: 10,
+                          bottom: 10,
+                        ),
                     child: Row(
                       children: [
                         Container(
                           child: Text(
                             "To",
                             style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontSize:
+                                  14,
+                              fontWeight:
+                                  FontWeight
+                                      .w400,
                             ),
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10, right: 10),
+                          margin:
+                              EdgeInsets.only(
+                                left:
+                                    10,
+                                right:
+                                    10,
+                              ),
                           child: Text(
                             "Do",
                             style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
+                              fontSize:
+                                  16,
+                              fontWeight:
+                                  FontWeight
+                                      .w700,
                             ),
                           ),
                         ),
@@ -765,8 +877,16 @@ class BirinciSayfa extends StatelessWidget {
                           width: 32,
                           height: 32,
                           child: CircleAvatar(
-                            backgroundColor: Color.fromARGB(255, 226, 238, 238),
-                            child: Text("3"),
+                            backgroundColor:
+                                Color.fromARGB(
+                                  255,
+                                  226,
+                                  238,
+                                  238,
+                                ),
+                            child: Text(
+                              "3",
+                            ),
                           ),
                         ),
                       ],
@@ -783,21 +903,40 @@ class BirinciSayfa extends StatelessWidget {
                   child: Container(
                     height: 158,
                     child: ListView(
-                      scrollDirection: Axis.horizontal,
+                      scrollDirection:
+                          Axis.horizontal,
                       children: [
                         // BİRİNCİ KONTEYNER
                         Container(
-                          margin: EdgeInsets.only(right: 10),
+                          margin:
+                              EdgeInsets.only(
+                                right:
+                                    10,
+                              ),
                           width: 160,
                           height: 158,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 253, 238, 233),
-                            borderRadius: BorderRadius.circular(20),
+                            color:
+                                Color.fromARGB(
+                                  255,
+                                  253,
+                                  238,
+                                  233,
+                                ),
+                            borderRadius:
+                                BorderRadius.circular(
+                                  20,
+                                ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal:
+                                  15,
+                            ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -876,17 +1015,35 @@ class BirinciSayfa extends StatelessWidget {
 
                         // İKİNCİ KONTEYNER
                         Container(
-                          margin: EdgeInsets.only(right: 10),
+                          margin:
+                              EdgeInsets.only(
+                                right:
+                                    10,
+                              ),
                           width: 160,
                           height: 158,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 233, 245, 245),
-                            borderRadius: BorderRadius.circular(20),
+                            color:
+                                Color.fromARGB(
+                                  255,
+                                  233,
+                                  245,
+                                  245,
+                                ),
+                            borderRadius:
+                                BorderRadius.circular(
+                                  20,
+                                ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal:
+                                  15,
+                            ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -968,13 +1125,27 @@ class BirinciSayfa extends StatelessWidget {
                           width: 160,
                           height: 158,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 238, 236, 250),
-                            borderRadius: BorderRadius.circular(20),
+                            color:
+                                Color.fromARGB(
+                                  255,
+                                  238,
+                                  236,
+                                  250,
+                                ),
+                            borderRadius:
+                                BorderRadius.circular(
+                                  20,
+                                ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal:
+                                  15,
+                            ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .spaceEvenly,
                               children: [
                                 // BİRİNCİ SATIR
                                 Row(
@@ -1050,7 +1221,9 @@ class BirinciSayfa extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 30),
+                        SizedBox(
+                          width: 30,
+                        ),
                       ],
                     ),
                   ),
@@ -1063,25 +1236,41 @@ class BirinciSayfa extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(top: 10, bottom: 10),
+                    margin:
+                        EdgeInsets.only(
+                          top: 10,
+                          bottom: 10,
+                        ),
                     child: Row(
                       children: [
                         Container(
                           child: Text(
                             "In",
                             style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
+                              fontSize:
+                                  16,
+                              fontWeight:
+                                  FontWeight
+                                      .w700,
                             ),
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10, right: 10),
+                          margin:
+                              EdgeInsets.only(
+                                left:
+                                    10,
+                                right:
+                                    10,
+                              ),
                           child: Text(
                             "Progress",
                             style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontSize:
+                                  14,
+                              fontWeight:
+                                  FontWeight
+                                      .w400,
                             ),
                           ),
                         ),
@@ -1089,8 +1278,16 @@ class BirinciSayfa extends StatelessWidget {
                           width: 32,
                           height: 32,
                           child: CircleAvatar(
-                            backgroundColor: Color.fromARGB(255, 255, 231, 205),
-                            child: Text("3"),
+                            backgroundColor:
+                                Color.fromARGB(
+                                  255,
+                                  255,
+                                  231,
+                                  205,
+                                ),
+                            child: Text(
+                              "3",
+                            ),
                           ),
                         ),
                       ],
@@ -1105,23 +1302,41 @@ class BirinciSayfa extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(right: 30),
+                    margin:
+                        EdgeInsets.only(
+                          right: 30,
+                        ),
                     height: 88,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 233, 245, 245),
-                      borderRadius: BorderRadius.circular(20),
+                      color:
+                          Color.fromARGB(
+                            255,
+                            233,
+                            245,
+                            245,
+                          ),
+                      borderRadius:
+                          BorderRadius.circular(
+                            20,
+                          ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding:
+                          const EdgeInsets.all(
+                            10,
+                          ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment:
+                            MainAxisAlignment
+                                .spaceEvenly,
                         children: [
                           // BİRİNCİ SÜTUN
                           Flexible(
                             flex: 7,
                             child: Container(
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
                                 children: [
                                   // BİRİNCİ SATIR
                                   Row(
@@ -1185,17 +1400,26 @@ class BirinciSayfa extends StatelessWidget {
                           Flexible(
                             flex: 3,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment:
+                                  MainAxisAlignment
+                                      .center,
                               children: [
                                 Expanded(
                                   child: Container(
-                                    width: 24,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          "resimler/birinci_sayfa/kontrol_kutu.png",
-                                        ),
-                                      ),
+                                    width:
+                                        24,
+                                    child: Checkbox(
+                                      value: basildiMi,
+                                      onChanged:
+                                          (
+                                            deger,
+                                          ) {
+                                            setState(
+                                              () {
+                                                basildiMi = !basildiMi;
+                                              },
+                                            );
+                                          },
                                     ),
                                   ),
                                 ),
