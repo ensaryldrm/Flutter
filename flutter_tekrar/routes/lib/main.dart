@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:routes/greenpage.dart';
 import 'package:routes/hataSayfasi.dart';
 import 'package:routes/redpage.dart';
+import 'package:routes/route_generator.dart';
 import 'package:routes/yellowpage.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => YellowPage(),
         "/greenPage": (context) => GreenPage(),
       },
+      // onGenerateRoute: RouteGenerator.routeGenerator,
       onUnknownRoute: (settings) =>
           MaterialPageRoute(builder: (context) => HataSayfasi()),
       theme: ThemeData(
@@ -43,4 +45,26 @@ class MyApp extends StatelessWidget {
   5) Diğeri ise hem sayfa geçişini hemde veri aktarımını sağlar ama daha karmaşıktır.
 
   6) Rotaları tanımlamak için MaterialApp içerisindeki routes parametresi kullanılır ve bizden bir map ister içine rota ister.
+
+  7)
+    a) Eğer ana rotayı tanımlamak istersek "/" işareti ile tanımlarız:
+      -> "/": (context) => RedPage(),
+    -------------------------------
+    b) Eğer bunu yapıyorsanız artık diğer rotaların başına bu slash işareti hep konulmalıdır:
+      -> "/yellowPage": (context) => YellowPage(),
+      -> "/greenPage": (context) => GreenPage(),
+    -------------------------------
+    c) Ayrıca bu kök dizinini kullanacaksanız artık MaterialApp de home parametresini kullanamazsınız ya kaldırın ya da yorum starı yapın:
+      -> //home: RedPage(),
+    -------------------------------
+    d) Eğer bu rotada herhangi bir yanlış yol olursa çalışan özel bir parametre vardır bu da MaterialApp içerisindedir.
+    Routes'ın bittiği yerde şunu tanımlıyoruz tabi daha öncesinde bir hata sayfası oluşturduk:
+      -> onUnknownRoute: (settings) => MaterialPageRoute(builder: (context) => HataSayfasi()),
+  
+  8) 
+  onGenerateRoute Parametresi
+    -> MaterialApp içerisinde bulunur.
+    "onGenerateRoute:" adında bir parametresi vardır.
+    Bunun önceki konudan farkı sadece sayfa açma işlemini değil aynı zamanda veri aktraımını yapmak içinde kullanılabildiği için daha fazla işimize yarar.
+
 */
