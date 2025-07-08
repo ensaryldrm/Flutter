@@ -69,5 +69,16 @@ class MyApp extends StatelessWidget {
   9) 
     onGenerateRoute ile Kurucu Yardımıyla Veri Gönderme
       a) Sayfaya gidecek olan butonun olduğu sayfada veri oluşturulur.
+      -----------------
+      b) Verinin gideceği sayfada kurucusunda alınacak veri için hazırlık yapılır.
+      -----------------
+      c) Rota yönetiminin olduğu sayfada(route_generator) veri verinin gideceği sayfaya gönderilir.
+        -> String name = settings.arguments as String;
+              return MaterialPageRoute(builder: (context)=> GreenPage(ad: name));
+      -----------------
+      d) Anasayfadaki veriyi gönderen butona şu yazılır:
+        -> Navigator.of(context).pushNamed("/greenPage", arguments: name);
+      -----------------
+      e) Sonuç olarak veri gönderimi tamamlanır.
   
 */
