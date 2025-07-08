@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 
-class YellowPage extends StatelessWidget {
+class YellowPage extends StatefulWidget {
   const YellowPage({super.key});
+
+  @override
+  State<YellowPage> createState() => _YellowPageState();
+}
+
+class _YellowPageState extends State<YellowPage> {
   late String name;
+  @override
+  void initState() {
+    super.initState();
+    name = "Bilal";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +57,9 @@ class YellowPage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.of(context).pushNamed("/greenPage");
+                  Navigator.of(
+                    context,
+                  ).pushNamed("/greenPage", arguments: name);
                 },
                 child: Text("Yeşil sayfaya git"),
               ),

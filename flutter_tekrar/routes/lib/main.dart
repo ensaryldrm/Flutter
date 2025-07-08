@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:routes/greenpage.dart';
 import 'package:routes/hataSayfasi.dart';
-import 'package:routes/redpage.dart';
 import 'package:routes/route_generator.dart';
-import 'package:routes/yellowpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: {
+      /*routes: {
         "/redPage": (context) => RedPage(),
         "/": (context) => YellowPage(),
-        "/greenPage": (context) => GreenPage(),
-      },
-      // onGenerateRoute: RouteGenerator.routeGenerator,
+        "/greenPage": (context) => GreenPage(ad: ),
+      },*/
+      onGenerateRoute: RouteGenerator.routeGenerator,
       onUnknownRoute: (settings) =>
           MaterialPageRoute(builder: (context) => HataSayfasi()),
       theme: ThemeData(
@@ -62,9 +59,15 @@ class MyApp extends StatelessWidget {
       -> onUnknownRoute: (settings) => MaterialPageRoute(builder: (context) => HataSayfasi()),
   
   8) 
-  onGenerateRoute Parametresi
-    -> MaterialApp içerisinde bulunur.
-    "onGenerateRoute:" adında bir parametresi vardır.
-    Bunun önceki konudan farkı sadece sayfa açma işlemini değil aynı zamanda veri aktraımını yapmak içinde kullanılabildiği için daha fazla işimize yarar.
+    onGenerateRoute Parametresi
+      -> MaterialApp içerisinde bulunur.
+      -> "onGenerateRoute:" adında bir parametresi vardır.
+      ->Bunun önceki konudan farkı sadece sayfa açma işlemini değil aynı zamanda veri aktramını
+        yapmak içinde kullanılabildiği için daha fazla işimize yarar.
+      -> MaterialApp'in içini doldurmak istemiyoruz, o yüzden farklı bir dosya oluşturup orada bu işlemi tanımlayıp MaterialApp de çağırırız.
 
+  9) 
+    onGenerateRoute ile Kurucu Yardımıyla Veri Gönderme
+      a) Sayfaya gidecek olan butonun olduğu sayfada veri oluşturulur.
+  
 */

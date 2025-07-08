@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:routes/greenpage.dart';
+import 'package:routes/hataSayfasi.dart';
 import 'package:routes/redpage.dart';
 import 'package:routes/yellowpage.dart';
 
@@ -13,10 +14,11 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => RedPage());
 
       case "/greenPage":
-        return MaterialPageRoute(builder: (context) => GreenPage());
+        String name = settings.arguments as String;
+        return MaterialPageRoute(builder: (context) => GreenPage(ad: name));
 
       default:
-        return MaterialPageRoute(builder: (context) => GreenPage());
+        return MaterialPageRoute(builder: (context) => HataSayfasi());
     }
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class GreenPage extends StatelessWidget {
-  const GreenPage({super.key});
+  final String ad;
+  const GreenPage({required this.ad});
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,16 @@ class GreenPage extends StatelessWidget {
         title: Text("Green Page"),
         backgroundColor: Colors.green.shade600,
         foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              "Merhaba ${ad} Bey",
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ],
+        ),
       ),
     );
   }
