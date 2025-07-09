@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_uygulama/kayitSayfa.dart';
+import 'package:pizza_uygulama/pages/routeGenerator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: StatelessOrnek(),
+      onGenerateRoute: Routegenerator.routeGenerator,
     );
   }
 }
