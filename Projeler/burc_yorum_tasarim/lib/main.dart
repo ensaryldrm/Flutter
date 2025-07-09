@@ -17,3 +17,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// CUMA GÜNÜ UYGULAMANIN VİDEOSUNU GETİRECEĞİZ
