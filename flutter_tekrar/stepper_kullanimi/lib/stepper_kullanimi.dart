@@ -135,7 +135,7 @@ class _StepperKullanimiState extends State<StepperKullanimi> {
           },
           decoration: InputDecoration(
             labelText: "Password",
-            hintText: "Şifrel",
+            hintText: "Şifre",
             border: OutlineInputBorder(),
           ),
         ),
@@ -170,6 +170,39 @@ class _StepperKullanimiState extends State<StepperKullanimi> {
         break;
 
       case 1:
+        if (keyEmail.currentState!.validate()) {
+          keyEmail.currentState!.save();
+          hata = false;
+          _aktifStep = 2;
+        } else {
+          hata = true;
+        }
+        break;
+
+      case 2:
+        if (keyPassword.currentState!.validate()) {
+          keyPassword.currentState!.save();
+          hata = false;
+          _aktifStep = 2;
+          formTamamlandi();
+        } else {
+          hata = true;
+        }
+        break;
     }
+  }
+
+  void formTamamlandi() {
+    String result =
+        "--Girilen değerler--\nİsim: $kullaniciIsim\nEmail: $mail\nŞifre: $sifre";
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.grey.shade500,
+        content: Text(
+          result,
+          style: TextStyle(fontSize: 20, color: Colors.black),
+        ),
+      ),
+    );
   }
 }
