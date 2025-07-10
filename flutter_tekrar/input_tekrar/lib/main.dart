@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:input_tekrar/input_tekrar.dart';
+import 'package:input_tekrar/text_field_tekrar.dart';
 
 void main() {
   runApp(const MyApp());
