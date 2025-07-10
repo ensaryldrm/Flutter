@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:input_tekrar/text_field_tekrar.dart';
+import 'package:input_tekrar/text_form_field_tekrar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: InputTekrar());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: TextFormFieldTekrar(),
+    );
   }
 }
