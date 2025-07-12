@@ -1,3 +1,4 @@
+import 'package:coffy_app/views/kayitOncesiSayfa/uyeOlSayfa.dart';
 import 'package:flutter/material.dart';
 
 class KayitOncesiTasarim extends StatefulWidget {
@@ -147,7 +148,10 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15),
+                      ),
                     ),
                     child: Column(
                       children: [
@@ -313,14 +317,18 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                             Container(
                                               height: 4,
                                               width: 30,
-                                              decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(20)),
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                              ),
                                             ),
                                           ],
                                         ),
-                                       
+
                                         // ARADAKİ MESAFE İÇİN SIZEDBOX
-                                        SizedBox(height: 25,),
-                                        
+                                        SizedBox(height: 25),
+
                                         // HOŞGELDİN YAZISI
                                         Row(
                                           children: [
@@ -335,8 +343,8 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                         ),
 
                                         // ARADAKİ MESAFE İÇİN SIZEDBOX
-                                        SizedBox(height: 15,),
-                                        
+                                        SizedBox(height: 15),
+
                                         // UZUN ÜST YAZI
                                         Row(
                                           children: [
@@ -364,8 +372,8 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                         ),
 
                                         // ARADAKİ MESAFE İÇİN SIZEDBOX
-                                        SizedBox(height: 25,),
-                                        
+                                        SizedBox(height: 25),
+
                                         // ÜYE OL BUTTON
                                         Row(
                                           children: [
@@ -384,7 +392,15 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                                               180,
                                                             ),
                                                       ),
-                                                  onPressed: () {},
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            UyeOlSayfa(),
+                                                      ),
+                                                    );
+                                                  },
                                                   child: Text(
                                                     "Üye Ol",
                                                     style: TextStyle(
@@ -401,8 +417,8 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                         ),
 
                                         // ARADAKİ MESAFE İÇİN SIZEDBOX
-                                        SizedBox(height: 10,),
-                                        
+                                        SizedBox(height: 10),
+
                                         // --VEYA-- KISMI
                                         Row(
                                           children: [
@@ -447,8 +463,8 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                         ),
 
                                         // ARADAKİ MESAFE İÇİN SIZEDBOX
-                                        SizedBox(height: 10,),
-                                        
+                                        SizedBox(height: 10),
+
                                         // GİRİŞ YAP BUTTON
                                         Row(
                                           children: [
@@ -459,15 +475,21 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                                   style:
                                                       ElevatedButton.styleFrom(
                                                         elevation: 0,
-                                                        side: BorderSide(color: Colors.grey.shade400, width: 0.8),
+                                                        side: BorderSide(
+                                                          color: Colors
+                                                              .grey
+                                                              .shade400,
+                                                          width: 0.8,
+                                                        ),
                                                         backgroundColor:
-                                                            Colors.white
+                                                            Colors.white,
                                                       ),
                                                   onPressed: () {},
                                                   child: Text(
                                                     "Giriş Yap",
                                                     style: TextStyle(
-                                                      color: Colors.grey.shade600,
+                                                      color:
+                                                          Colors.grey.shade600,
                                                       fontWeight:
                                                           FontWeight.w400,
                                                       fontSize: 17,
