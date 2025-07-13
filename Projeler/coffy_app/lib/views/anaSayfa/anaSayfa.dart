@@ -1,4 +1,5 @@
 import 'package:coffy_app/views/anaSayfa/pages/bildirim_sayfa.dart';
+import 'package:coffy_app/views/anaSayfa/pages/cekirdek_sayfa.dart';
 import 'package:coffy_app/views/anaSayfa/pages/qr_sayfa.dart';
 import 'package:coffy_app/views/aramaSayfa/arama_sayfa_main.dart';
 import 'package:coffy_app/views/hesab%C4%B1mSayfa/hesap_sayfa_main.dart';
@@ -220,7 +221,7 @@ class _anaSayfaMainState extends State<anaSayfaMain> {
                           height: 15,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(100),
                           ),
                           child: SmoothPageIndicator(
                             controller: controller,
@@ -228,7 +229,12 @@ class _anaSayfaMainState extends State<anaSayfaMain> {
                             effect: WormEffect(
                               dotHeight: 10,
                               dotWidth: 10,
-                              activeDotColor: Color.fromARGB(255, 116, 194, 181),
+                              activeDotColor: Color.fromARGB(
+                                255,
+                                116,
+                                194,
+                                181,
+                              ),
                               dotColor: Colors.grey,
                             ),
                           ),
@@ -236,6 +242,164 @@ class _anaSayfaMainState extends State<anaSayfaMain> {
                       ),
                     ),
                   ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => CekirdekSayfa()),
+                ),
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  height: 75,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 30,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  SizedBox(width: 10),
+                                  Text(
+                                    "5 Çekirdeğe 1 Kahve Hediye!",
+                                    style: TextStyle(
+                                      color: Colors.grey.shade200,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "Detaylar",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey.shade200,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Icon(
+                                    Icons.arrow_forward,
+                                    color: Colors.white,
+                                    size: 18,
+                                  ),
+                                  SizedBox(width: 10),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "3/",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    Text(
+                                      "5",
+                                      style: TextStyle(
+                                        color: Colors.grey.shade600,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    SizedBox(width: 15),
+                                    Expanded(
+                                      child: Container(
+                                        height: 16,
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey.shade400,
+                                          borderRadius: BorderRadius.circular(
+                                            100,
+                                          ),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              flex: 6,
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: Color.fromARGB(
+                                                    255,
+                                                    116,
+                                                    194,
+                                                    181,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        100,
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 4,
+                                              child: Container(),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 10),
+                                    SizedBox(
+                                      width: 25,
+                                      height: 25,
+                                      child: CircleAvatar(
+                                        backgroundColor: Color.fromARGB(
+                                          255,
+                                          116,
+                                          194,
+                                          181,
+                                        ),
+                                        child: Text(
+                                          "0",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(
+                                      "Bedava\nİçecek",
+                                      style: TextStyle(fontSize: 11),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
