@@ -1,3 +1,4 @@
+import 'package:coffy_app/data/urunler.dart';
 import 'package:coffy_app/views/anaSayfa/pages/bildirim_sayfa.dart';
 import 'package:coffy_app/views/anaSayfa/pages/cekirdek_sayfa.dart';
 import 'package:coffy_app/views/anaSayfa/pages/qr_sayfa.dart';
@@ -5,6 +6,11 @@ import 'package:coffy_app/views/aramaSayfa/arama_sayfa_main.dart';
 import 'package:coffy_app/views/hesab%C4%B1mSayfa/hesap_sayfa_main.dart';
 import 'package:coffy_app/views/kampanyalarSayfa/kampanya_sayfa_main.dart';
 import 'package:coffy_app/views/sepetimSayfa/sepetim_sayfa_main.dart';
+import 'package:coffy_app/widgets/en_cok_satanlar_list.dart';
+import 'package:coffy_app/widgets/kahvaltilik_list.dart';
+import 'package:coffy_app/widgets/sicak_icecek_list.dart';
+import 'package:coffy_app/widgets/soguk_icecek_list.dart';
+import 'package:coffy_app/widgets/tatli_list.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -160,9 +166,20 @@ class anaSayfaMain extends StatefulWidget {
 }
 
 class _anaSayfaMainState extends State<anaSayfaMain> {
+  List<Widget> kategoriSayfa = [
+    EnCokSatanlarList(enCokSatanlar: enCokSatanlarList),
+    SogukIcecekList(icecekList: sogukListesi),
+    SicakIcecekList(icecekList: sicakListesi),
+    KahvaltilikList(kahvaltilikList: kahvaltilikList),
+    TatliList(tatliList: tatliListesi),
+  ];
+
+  int seciliIndex = 0;
+
   PageController controller = PageController();
 
   List<String> resimler = ["resimler/reklam1.png", "resimler/reklam2.png"];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -405,6 +422,308 @@ class _anaSayfaMainState extends State<anaSayfaMain> {
             ),
           ],
         ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        // EN ÇOK SATANLAR
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              seciliIndex = 0;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              color: seciliIndex == 0
+                                  ? Color.fromARGB(255, 116, 194, 181)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 25,
+                                          height: 25,
+                                          child: CircleAvatar(
+                                            child: Icon(
+                                              Icons.star,
+                                              color: Colors.black,
+                                              size: 20,
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+
+                                        Text(
+                                          "En Çok Satanlar",
+                                          style: TextStyle(
+                                            fontSize: 13,
+                                            color: seciliIndex == 0
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 15),
+
+                        // Soğuk içecekler
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              seciliIndex = 1;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              color: seciliIndex == 1
+                                  ? Color.fromARGB(255, 116, 194, 181)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 25,
+                                          height: 25,
+                                          child: CircleAvatar(
+                                            child: Icon(
+                                              Icons.coffee_maker,
+                                              color: Colors.black,
+                                              size: 20,
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+
+                                        Text(
+                                          "Soğuk Kahveler",
+                                          style: TextStyle(
+                                            fontSize: 13,
+                                            color: seciliIndex == 1
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 15),
+
+                        // Sıcak içecekler
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              seciliIndex = 2;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              color: seciliIndex == 2
+                                  ? Color.fromARGB(255, 116, 194, 181)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 25,
+                                          height: 25,
+                                          child: CircleAvatar(
+                                            child: Icon(
+                                              Icons.coffee_maker,
+                                              color: Colors.black,
+                                              size: 20,
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+
+                                        Text(
+                                          "Sıcak Kahveler",
+                                          style: TextStyle(
+                                            fontSize: 13,
+                                            color: seciliIndex == 2
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 15),
+
+                        // Kahvaltılıklar
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              seciliIndex = 3;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 135,
+                            decoration: BoxDecoration(
+                              color: seciliIndex == 3
+                                  ? Color.fromARGB(255, 116, 194, 181)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 25,
+                                          height: 25,
+                                          child: CircleAvatar(
+                                            child: Icon(
+                                              Icons.breakfast_dining,
+                                              color: Colors.black,
+                                              size: 20,
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+
+                                        Text(
+                                          "Kahvaltılıklar",
+                                          style: TextStyle(
+                                            fontSize: 13,
+                                            color: seciliIndex == 3
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 15),
+
+                        // Tatlılar
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              seciliIndex = 4;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              color: seciliIndex == 4
+                                  ? Color.fromARGB(255, 116, 194, 181)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 25,
+                                          height: 25,
+                                          child: CircleAvatar(
+                                            child: Icon(
+                                              Icons.cake,
+                                              color: Colors.black,
+                                              size: 20,
+                                            ),
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        SizedBox(width: 5),
+
+                                        Text(
+                                          "Tatlılar",
+                                          style: TextStyle(
+                                            fontSize: 13,
+                                            color: seciliIndex == 4
+                                                ? Colors.white
+                                                : Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Expanded(child: kategoriSayfa[seciliIndex]),
       ],
     );
   }
