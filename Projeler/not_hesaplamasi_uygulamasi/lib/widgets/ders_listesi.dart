@@ -60,8 +60,10 @@ class DersListesi extends StatelessWidget {
             child: Text(
               "Lütfen Ders Ekleyiniz",
               style: TextStyle(
+                fontSize: 20,
                 color: Sabitler.anaRenk,
                 fontWeight: FontWeight.bold,
+                fontFamily: "ElYazisi",
               ),
             ),
           );
