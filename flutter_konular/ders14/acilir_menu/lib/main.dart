@@ -1,5 +1,4 @@
-import 'package:acilir_menu/widgets/image_and_tabbar_page.dart';
-import 'package:acilir_menu/widgets/nested_tab_bar_ornegi.dart';
+import 'package:acilir_menu/widgets/filter_menu_with_chips.dart';
 import 'package:acilir_menu/widgets/settings_expansion_menu.dart';
 import 'package:acilir_menu/widgets/expansiontile_page.dart';
 import 'package:acilir_menu/widgets/liste_ornek.dart';
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NestedTabBarOrnegi(),
+      home: FilterMenuWithChips(),
     );
   }
 }

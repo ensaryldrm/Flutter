@@ -20,14 +20,16 @@ class _NestedTabBarOrnegiState extends State<NestedTabBarOrnegi> {
           bottom: const TabBar(
             labelStyle: TextStyle(color: Colors.black),
             tabs: [
-              Tab(text: "Kategori - 1"),
-              Tab(text: "Kategori - 2"),
+              Tab(text: "Yazlık Ürünler"),
+              Tab(text: "Kışlık Ürünler"),
             ],
           ),
         ),
-        body: TabBarView(children: [
-          
-        ]
+        body: TabBarView(
+          children: [
+            InnerTaView(categoryName: "Yazlık Ürünler"),
+            InnerTaView(categoryName: "Kışlık Ürünler"),
+          ],
         ),
       ),
     );
@@ -48,10 +50,19 @@ class InnerTaView extends StatelessWidget {
             labelColor: Colors.red,
             unselectedLabelColor: Colors.green,
             tabs: [
-              Tab(text: "Alt Kategori A"),
-              Tab(text: "Alt Kategori B"),
-              Tab(text: "Alt Kategori C"),
+              Tab(text: "Pantolon"),
+              Tab(text: "Tişört"),
+              Tab(text: "Ayakkabı"),
             ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                Center(child: Text("$categoryName - Pantolon")),
+                Center(child: Text("$categoryName - Tişört")),
+                Center(child: Text("$categoryName - Ayakkabı")),
+              ],
+            ),
           ),
         ],
       ),
