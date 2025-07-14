@@ -1,8 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:not_hesaplamasi_uygulamasi/constants/sabitler.dart';
 import 'package:not_hesaplamasi_uygulamasi/helper/data_helper.dart';
 import 'package:not_hesaplamasi_uygulamasi/model/ders.dart';
 import 'package:not_hesaplamasi_uygulamasi/widgets/ders_listesi.dart';
+import 'package:not_hesaplamasi_uygulamasi/widgets/harf_dropdown_widget.dart';
+import 'package:not_hesaplamasi_uygulamasi/widgets/kredi_dropdown_widget.dart';
 import 'package:not_hesaplamasi_uygulamasi/widgets/ortalama_goster.dart';
 
 class OrtalamaHesapla extends StatefulWidget {
@@ -27,6 +30,7 @@ class _OrtalamaHesaplaState extends State<OrtalamaHesapla> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("build çalıştı");
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -88,9 +92,17 @@ class _OrtalamaHesaplaState extends State<OrtalamaHesapla> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               //Harfler için DropDownButton metodu oluşturduk
-              _buildHarfler(),
+              HarfDropdownWidget(
+                onHarfSecildi: (harfDegeri) {
+                  secilenHarfDegeri = harfDegeri;
+                },
+              ),
               //Krediler için DropDownButton metodu oluşturduk
-              _buildKrediler(),
+              KrediDropdownWidget(
+                onKrediSecildi: (krediDegeri) {
+                  secilenKrediDegeri = krediDegeri;
+                },
+              ),
               //Listeye eklemek için IconButton oluşturduk
               IconButton(
                 onPressed: () {
@@ -130,48 +142,6 @@ class _OrtalamaHesaplaState extends State<OrtalamaHesapla> {
           filled: true,
           fillColor: Sabitler.anaRenk.shade50,
         ),
-      ),
-    );
-  }
-
-  // HARFLER İÇİN DROPDOWNBUTTON OLUŞTURDUK
-  Widget _buildHarfler() {
-    return Container(
-      padding: Sabitler.dropDownPadding,
-      decoration: BoxDecoration(
-        color: Sabitler.anaRenk.shade50,
-        borderRadius: Sabitler.borderRadius,
-      ),
-      child: DropdownButton(
-        value: secilenHarfDegeri,
-        underline: SizedBox(),
-        items: DataHelper.tumDerslerinHarfleri(),
-        onChanged: (deger) {
-          setState(() {
-            secilenHarfDegeri = deger!;
-          });
-        },
-      ),
-    );
-  }
-
-  // KREDİ İÇİN DROPDOWNBUTTON OLUŞTURDUK
-  Widget _buildKrediler() {
-    return Container(
-      padding: Sabitler.dropDownPadding,
-      decoration: BoxDecoration(
-        color: Sabitler.anaRenk.shade50,
-        borderRadius: Sabitler.borderRadius,
-      ),
-      child: DropdownButton(
-        value: secilenKrediDegeri,
-        underline: SizedBox(),
-        items: DataHelper.tumDerslerinKredileri(),
-        onChanged: (deger) {
-          setState(() {
-            secilenKrediDegeri = deger!;
-          });
-        },
       ),
     );
   }
