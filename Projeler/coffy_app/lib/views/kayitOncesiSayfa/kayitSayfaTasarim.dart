@@ -524,7 +524,7 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                                   Container(
                                                     alignment:
                                                         Alignment.bottomCenter,
-                                                    width: 163,
+                                                    width: 180,
                                                     child: Text(
                                                       "Üye Girişi Yap veya Üye Ol",
                                                       style: TextStyle(
@@ -538,7 +538,7 @@ class _KayitOncesiTasarimState extends State<KayitOncesiTasarim> {
                                                   Container(
                                                     alignment:
                                                         Alignment.topCenter,
-                                                    width: 163,
+                                                    width: 180,
                                                     height: 10,
                                                     child: Container(
                                                       height: 1.5,

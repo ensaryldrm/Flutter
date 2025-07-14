@@ -30,6 +30,7 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
+            // çekirdek container
             Row(
               children: [
                 Expanded(
@@ -183,6 +184,8 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
               ],
             ),
             SizedBox(height: 20),
+
+            // yazı kont
             Row(
               children: [
                 Expanded(
@@ -224,6 +227,7 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
               ],
             ),
             SizedBox(height: 20),
+            // expansion tile
             Row(
               children: [
                 Expanded(
@@ -247,37 +251,12 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
                         SizedBox(height: 20),
                         Row(
                           children: [
-                            Text("Nasıl çekirdek kazanırım?"),
-                            Spacer(),
-                            Icon(Icons.keyboard_arrow_down, size: 30),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-
-                        Row(
-                          children: [
-                            Text("Çekirdeklerim hangi ürünlerde geçerli?"),
-                            Spacer(),
-                            Icon(Icons.keyboard_arrow_down, size: 30),
-                          ],
-                        ),
-
-                        SizedBox(height: 20,),
-
-                        Row(
-                          children: [
-                            Text("Çekirdeklerim tanımlanmadı. Ne yapabilirim?"),
-                            Spacer(),
-                            Icon(Icons.keyboard_arrow_down, size: 30),
-                          ],
-                        ),
-                        SizedBox(height: 20,),
-
-                        Row(
-                          children: [
-                            Text("Bedava içeceğimi nasıl kullanırım?"),
-                            Spacer(),
-                            Icon(Icons.keyboard_arrow_down, size: 30),
+                            Expanded(
+                              child: ExpansionTile(
+                                tilePadding: EdgeInsets.only(),
+                                title: Text("Nasıl çekirdek kazanırım?"),
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -286,19 +265,25 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
                 ),
               ],
             ),
-            SizedBox(height: 15,),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Ödeme adımında kampanya seçim alanından ilgili", style: TextStyle(fontWeight: FontWeight.w300, fontSize: 14),)
+                Text(
+                  "Ödeme adımında kampanya seçim alanından ilgili",
+                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 14),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("kampanyayı seçip ödemeni tamamlayabilirsin.", style: TextStyle(fontWeight: FontWeight.w300, fontSize: 14),)
+                Text(
+                  "kampanyayı seçip ödemeni tamamlayabilirsin.",
+                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 14),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
