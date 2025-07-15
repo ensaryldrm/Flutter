@@ -1,4 +1,5 @@
 import 'package:coffy_app/modals/urun.dart';
+import 'package:coffy_app/views/detaySayfalar/icecekler_detay_sayfa.dart';
 import 'package:coffy_app/widgets/urun_card.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +19,21 @@ class _SogukIcecekListState extends State<SogukIcecekList> {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         mainAxisSpacing: 5,
         crossAxisCount: 2,
-        childAspectRatio: 1.15,
+        childAspectRatio: 1,
       ),
       itemCount: widget.icecekList.length,
       itemBuilder: (context, index) {
-        return UrunCard(urun: widget.icecekList[index]);
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) =>
+                    IceceklerDetaySayfa(urun: widget.icecekList[index]),
+              ),
+            );
+          },
+          child: UrunCard(urun: widget.icecekList[index]),
+        );
       },
     );
   }

@@ -8,7 +8,11 @@ class BildirimSayfa extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 235, 236, 240),
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Navigator.pop(context),icon: Icon(Icons.arrow_back), color: Colors.white),
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(Icons.arrow_back),
+          color: Colors.white,
+        ),
         backgroundColor: Colors.black,
         title: Text(
           "Bildirimlerim",
@@ -114,7 +118,7 @@ class BildirimSayfa extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: 10),
                         Expanded(
                           flex: 7,
                           child: Column(
@@ -136,14 +140,25 @@ class BildirimSayfa extends StatelessWidget {
                                   Expanded(
                                     child: Container(
                                       height: 160,
-                                      decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(10)),
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(image: AssetImage("resimler/reklam2.png")),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                               Row(
-                                children: [Text("Fikirlerinle gelişmemize yardımcı olduğun\niçin teşekkür ederiz", style: TextStyle(fontSize: 14, color: Colors.grey.shade800),)],
-                              )
+                                children: [
+                                  Text(
+                                    "Fikirlerinle gelişmemize yardımcı olduğun\niçin teşekkür ederiz",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey.shade800,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         ),

@@ -233,7 +233,7 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.all(10),
-                    height: 250,
+                    height: 340,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -248,13 +248,110 @@ class _CekirdekSayfaState extends State<CekirdekSayfa> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
                         Row(
                           children: [
                             Expanded(
                               child: ExpansionTile(
+                                expansionAnimationStyle: AnimationStyle(
+                                  curve: Curves.bounceInOut,
+                                  duration: Duration(milliseconds: 300),
+                                ),
                                 tilePadding: EdgeInsets.only(),
-                                title: Text("Nasıl çekirdek kazanırım?"),
+                                title: Text(
+                                  "Nasıl çekirdek kazanırım?",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Uygulamadan vereceğin içecek siparişlerinde ürünlerin\ndetayında belirtilen çekirdek adedi hesabına tanımlanır.",
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ExpansionTile(
+                                expansionAnimationStyle: AnimationStyle(
+                                  curve: Curves.bounceInOut,
+                                  duration: Duration(milliseconds: 300),
+                                ),
+                                tilePadding: EdgeInsets.only(),
+                                title: Text(
+                                  "Çekirdeklerim hangi ürünlerde geçerli?",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Çekirdeklerini biriktirerek kazandığın bedava içecekleri\nseçili standart ve orta boy içeceklerde kullanabilirsin.",
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ExpansionTile(
+                                expansionAnimationStyle: AnimationStyle(
+                                  curve: Curves.bounceInOut,
+                                  duration: Duration(milliseconds: 300),
+                                ),
+                                tilePadding: EdgeInsets.only(),
+                                title: Text(
+                                  "Çekirdeklerim tanımlanmadı. Ne yapabilirim?",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Çekirdekler siparişin tamamlanıp, teslim edildikten sonra\n4 saat içnide tamamlanmış olur.Eğer 4 saat içinde\ntamamlanmadıysa yardım sekmesindeki WhatsApp\nDestek hattından bize ulaşabilirsin.",
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ExpansionTile(
+                                expansionAnimationStyle: AnimationStyle(
+                                  curve: Curves.bounceInOut,
+                                  duration: Duration(milliseconds: 300),
+                                ),
+                                tilePadding: EdgeInsets.only(),
+                                title: Text(
+                                  "Bedava içeceğimi nasıl kullanırım?",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Ödeme adımında Kampanyalar alanından ilgili\nkampanyayı seçip ödemeni tamamlayabilirsin.",
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                           ],

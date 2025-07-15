@@ -2,23 +2,24 @@ import 'package:coffy_app/modals/urun.dart';
 import 'package:coffy_app/widgets/urun_card.dart';
 import 'package:flutter/material.dart';
 
-class EnCokSatanlarList extends StatefulWidget {
+class YatayEnCokSatanlarList extends StatefulWidget {
   final List<Urun> enCokSatanlar;
-  const EnCokSatanlarList({required this.enCokSatanlar, super.key});
+  const YatayEnCokSatanlarList({required this.enCokSatanlar, super.key});
 
   @override
-  State<EnCokSatanlarList> createState() => _EnCokSatanlarListState();
+  State<YatayEnCokSatanlarList> createState() => _YatayEnCokSatanlarListState();
 }
 
-class _EnCokSatanlarListState extends State<EnCokSatanlarList> {
+class _YatayEnCokSatanlarListState extends State<YatayEnCokSatanlarList> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      scrollDirection: Axis.horizontal,
       padding: EdgeInsets.symmetric(horizontal: 20),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         mainAxisSpacing: 5,
-        crossAxisCount: 2,
-        childAspectRatio: 1
+        crossAxisCount: 1,
+        childAspectRatio: 1,
       ),
       itemCount: widget.enCokSatanlar.length,
       itemBuilder: (context, index) {
