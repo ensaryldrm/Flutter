@@ -1,0 +1,46 @@
+[
+    
+    {
+        "araba_adi": "Toyota",
+        "ulke": "Japonya",
+        "kurulus_yili": "1920",
+        "model": [
+            {
+                "model_adi": "Corolla",
+                "fiyat": "1500000",
+                "benzinli": false
+            },
+            {
+                "model_adi": "Yaris",
+                "fiyat": "1350000",
+                "benzinli": true
+            }
+        ]
+    },
+
+    {
+        "araba_adi": "Opel",
+        "ulke": "Fransa",
+        "kurulus_yili": "1900",
+        "model": [
+            {
+                "model_adi": "Corsa",
+                "fiyat": "1250000",
+                "benzinli": false
+            },
+
+            {
+                "model_adi": "Astra",
+                "fiyat": "1350000",
+                "benzinli": true
+            },
+
+            {
+                "model_adi": "Vectra",
+                "fiyat": "1150000",
+                "benzinli": false
+            }        
+        ]
+    }
+
+]
