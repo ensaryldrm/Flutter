@@ -11,6 +11,14 @@ class LocalApiIslemleri extends StatefulWidget {
 }
 
 class _LocalApiIslemleriState extends State<LocalApiIslemleri> {
+  late Future<List<ArabaModel>> arabalar;
+
+  @override
+  void initState() {
+    super.initState();
+    arabalar = arabalarJsonOku();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +29,7 @@ class _LocalApiIslemleriState extends State<LocalApiIslemleri> {
       ),
       body: Center(
         child: FutureBuilder<List<ArabaModel>>(
-          future: arabalarJsonOku(),
+          future: arabalar,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               List<ArabaModel> arabaList = snapshot.data!;
