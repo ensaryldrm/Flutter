@@ -95,6 +95,7 @@ class _IceceklerDetaySayfaState extends State<IceceklerDetaySayfa> {
                     ),
                     child: Column(
                       children: [
+                        SizedBox(height: 30),
                         Row(
                           children: [
                             Container(
