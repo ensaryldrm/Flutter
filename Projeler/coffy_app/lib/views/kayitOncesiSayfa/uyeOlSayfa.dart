@@ -479,8 +479,20 @@ class _UyeOlSayfaState extends State<UyeOlSayfa> {
                                         ),
                                         onPressed: herseyGirildiMi
                                             ? () {
-                                              Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (_)=> AnaSayfa()), (Route<dynamic> route)=>false);
-                                            }
+                                                Navigator.of(
+                                                  context,
+                                                ).pushAndRemoveUntil(
+                                                  MaterialPageRoute(
+                                                    builder: (_) => AnaSayfa(
+                                                      isim: adText.text,
+                                                      telNo: telNoText.text,
+                                                      soyIsim: soyadText.text,
+                                                    ),
+                                                  ),
+                                                  (Route<dynamic> route) =>
+                                                      false,
+                                                );
+                                              }
                                             : null,
                                         child: Text("Devam Et"),
                                       ),

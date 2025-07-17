@@ -8,6 +8,7 @@ class CekirdekSayfa extends StatefulWidget {
 }
 
 class _CekirdekSayfaState extends State<CekirdekSayfa> {
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(

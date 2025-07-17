@@ -15,7 +15,15 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class AnaSayfa extends StatefulWidget {
-  const AnaSayfa({super.key});
+  final String isim;
+  final String telNo;
+  final String soyIsim;
+  const AnaSayfa({
+    required this.isim,
+    required this.soyIsim,
+    required this.telNo,
+    super.key,
+  });
 
   @override
   State<AnaSayfa> createState() => _AnaSayfaState();
@@ -23,15 +31,19 @@ class AnaSayfa extends StatefulWidget {
 
 class _AnaSayfaState extends State<AnaSayfa> {
   int secilmisIndex = 0;
-  List<Widget> sayfalarList = [
-    anaSayfaMain(),
-    AramaSayfaMain(),
-    KampanyaSayfaMain(),
-    HesapSayfaMain(),
-  ];
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> sayfalarList = [
+      anaSayfaMain(),
+      AramaSayfaMain(),
+      KampanyaSayfaMain(),
+      HesapSayfaMain(
+        isim: widget.isim,
+        telNo: widget.telNo,
+        soyIsim: widget.soyIsim,
+      ),
+    ];
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
