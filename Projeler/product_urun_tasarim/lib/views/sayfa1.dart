@@ -186,7 +186,10 @@ class _Sayfa1State extends State<Sayfa1> {
                               ),
                               title: Text(
                                 "${gelenVeri.ustBaslik}",
-                                style: TextStyle(fontSize: 13),
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               subtitle: Text(
                                 "${gelenVeri.altBaslik}",
@@ -215,6 +218,22 @@ class _Sayfa1State extends State<Sayfa1> {
                   ],
                 ),
 
+                Padding(
+                  padding: EdgeInsets.only(right: 20),
+
+                  child: Row(
+                    children: [
+                      Text(
+                        "Order Updates",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 FutureBuilder(
                   future: orderUpdate,
                   builder: (context, snapshot) {
@@ -234,7 +253,10 @@ class _Sayfa1State extends State<Sayfa1> {
                               ),
                               title: Text(
                                 "${gelenVeri.ustBaslik}",
-                                style: TextStyle(fontSize: 13),
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               subtitle: Text(
                                 "${gelenVeri.altBaslik}",
